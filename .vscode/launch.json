@@ -1,0 +1,14 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug LocalRoute (Edge)",
+      "type": "pwa-msedge",
+      "request": "launch",
+      "url": "http://127.0.0.1:5173",
+      "webRoot": "${workspaceFolder}/MVP",
+      "preLaunchTask": "LocalRoute: dev server",
+      "sourceMaps": true
+    }
+  ]
+}
