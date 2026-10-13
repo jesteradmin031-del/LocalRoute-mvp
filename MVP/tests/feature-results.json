@@ -1,0 +1,77 @@
+{
+  "target": "http://127.0.0.1:5178",
+  "generatedAt": "2026-10-13T09:17:30.621Z",
+  "passed": 16,
+  "failed": 0,
+  "results": [
+    {
+      "name": "Search by aliases, swap endpoints, reject invalid and identical places",
+      "status": "passed"
+    },
+    {
+      "name": "All five route preferences and estimates",
+      "status": "passed"
+    },
+    {
+      "name": "Journey details, route selection, map highlight and zoom",
+      "status": "passed"
+    },
+    {
+      "name": "Typed intent, mixed-language aliases, unknown request and assistance",
+      "status": "passed"
+    },
+    {
+      "name": "Save, persist, reopen and remove a journey",
+      "status": "passed"
+    },
+    {
+      "name": "Manual guidance and arrival",
+      "status": "passed"
+    },
+    {
+      "name": "Missed-stop recovery and destination arrival recovery",
+      "status": "passed"
+    },
+    {
+      "name": "Route and landmark contributions persist and can be removed",
+      "status": "passed"
+    },
+    {
+      "name": "Trusted contact persistence and dialer link",
+      "status": "passed"
+    },
+    {
+      "name": "Share text fallback",
+      "status": "passed"
+    },
+    {
+      "name": "Clipboard adapter and provider handoff",
+      "status": "passed"
+    },
+    {
+      "name": "Shared-link endpoint restoration",
+      "status": "passed"
+    },
+    {
+      "name": "Voice unsupported and permission-denied fallback handling",
+      "status": "passed"
+    },
+    {
+      "name": "Speech guidance adapter",
+      "status": "passed"
+    },
+    {
+      "name": "Mobile layout and navigation",
+      "status": "passed"
+    },
+    {
+      "name": "Dialog focus, Escape and backdrop dismissal",
+      "status": "passed"
+    }
+  ],
+  "limitations": [
+    "Microphone transcription, audible speech, native share targets, OS dialer and actual Uber booking were not exercised. Browser API adapters used mocks where identified.",
+    "Transport results use demo fixtures.",
+    "VS Code debugger launch was not exercised."
+  ]
+}

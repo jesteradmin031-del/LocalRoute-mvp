@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-13",
+  "scope": "Local development server and production preview only; no public host or third-party service tested",
+  "browser": "Microsoft Edge, headless",
+  "findings": [
+    {
+      "severity": "low",
+      "status": "fixed",
+      "title": "Malformed local contribution ID crashes Contribute dialog",
+      "prerequisite": "Ability to modify this origin's localStorage",
+      "reproduction": "Store a landmark contribution with id equal to an object containing toString:null, then open Contribute",
+      "fix": "Accept only string or finite numeric contribution IDs before rendering",
+      "verified": "Crash reproduced before patch and rejected after patch in development and production preview"
+    },
+    {
+      "severity": "hardening",
+      "status": "deployment-dependent",
+      "title": "Local Vite servers do not send security response headers",
+      "observedMissing": ["Content-Security-Policy", "X-Frame-Options", "X-Content-Type-Options", "Referrer-Policy"],
+      "nextStep": "Configure appropriate headers on the eventual HTTPS production host and verify there",
+      "limitation": "No deployed host was provided or assessed"
+    }
+  ],
+  "validation": {
+    "unitTests": {"passed": 19, "failed": 0},
+    "browserScenariosPerTarget": {"passed": 16, "failed": 0},
+    "additionalHttpObservationRecordPerTarget": 1,
+    "build": "passed",
+    "npmAudit": {"reportedVulnerabilities": 0},
+    "categories": ["Reflected XSS", "Stored XSS", "Malicious URL inputs", "Prototype-key inputs", "Local storage tampering", "Provider URL manipulation", "File exposure probes", "Graph data integrity"]
+  },
+  "limitations": [
+    "Passing these payloads does not prove the application is free of vulnerabilities",
+    "Missing secret files returning the SPA HTML does not prove all possible file disclosure paths are blocked",
+    "No backend, database, authentication system, or public hosting configuration exists in the assessed app",
+    "SQL-like input was tested only for safe frontend handling; there is no database to test for SQL injection",
+    "External browser requests were blocked during browser tests; npm audit separately queried the npm registry"
+  ]
+}

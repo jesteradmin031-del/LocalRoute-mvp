@@ -1,0 +1,121 @@
+{
+  "target": "http://127.0.0.1:5178",
+  "generatedAt": "2026-10-13T09:04:04.453Z",
+  "passed": 16,
+  "failed": 1,
+  "results": [
+    {
+      "name": "URL input: __proto__",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "name": "URL input: constructor",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "name": "URL input: toString",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "name": "URL input: <img src=x onerror=\"window.__securityXss=1\">",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "name": "URL input: ' OR 1=1 --",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "name": "URL input: javascript:window.__securityXss=1",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "name": "URL input: %00",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "name": "URL input: ../.env",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "name": "Reflected XSS in planner and interpreter",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "name": "Stored XSS in community contribution",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "name": "Malformed saved entries",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "name": "Malformed trusted contact",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "name": "Object contribution ID",
+      "passed": false,
+      "error": "App crashed on poisoned storage",
+      "errors": [
+        "Cannot convert object to primitive value"
+      ]
+    },
+    {
+      "name": "Malformed contribution entries",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "name": "Provider URL cannot be replaced via query parameters",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "name": "HTTP probe observations",
+      "passed": true,
+      "observations": [
+        {
+          "path": "/.env",
+          "status": 200,
+          "type": "text/html"
+        },
+        {
+          "path": "/.env.local",
+          "status": 200,
+          "type": "text/html"
+        },
+        {
+          "path": "/.git/config",
+          "status": 200,
+          "type": "text/html"
+        },
+        {
+          "path": "/../package.json",
+          "status": 200,
+          "type": "application/json"
+        },
+        {
+          "path": "/@fs/E:/LocalRoute/package.json",
+          "status": 403
+        }
+      ]
+    },
+    {
+      "name": "Local file exposure probes",
+      "passed": true,
+      "errors": []
+    }
+  ]
+}
