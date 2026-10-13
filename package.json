@@ -1,0 +1,12 @@
+{
+  "name": "localroute-workspace",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "setup": "npm --prefix MVP ci",
+    "dev": "npm --prefix MVP run dev",
+    "build": "npm --prefix MVP run build",
+    "preview": "npm --prefix MVP run preview",
+    "test": "npm --prefix MVP test"
+  }
+}
